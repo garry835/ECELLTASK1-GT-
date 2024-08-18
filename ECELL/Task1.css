@@ -1,0 +1,323 @@
+/* Apply background image to the entire page */
+body {
+    background-image: url('file:///C:/Users/tatia/Desktop/ECELL/HELLO.jpeg');
+    background-size:auto;        /* Ensures the background image covers the entire viewport */
+    background-position: center;   /* Centers the background image */
+    background-repeat: no-repeat;  /* Prevents the background image from repeating */
+    margin: 0;                     /* Removes default margin */
+    padding: 0;                    /* Removes default padding */
+    height: 100vh;                 /* Makes the body fill the viewport height */
+    width: 100vw;  
+    
+               /* Makes the body fill the viewport width */
+}
+
+
+
+
+/* Style for the header */
+header {
+    display: flex;
+    justify-content: space-between; /* Distributes space between items */
+    margin-top: 20px;               /* Adds space above the header */
+    padding: 0 20px;               /* Adds horizontal padding to the header */
+    position: relative;   
+    margin-bottom:   60px;      /* Ensures header is positioned relative to the body */
+    margin-top: 0px ;
+}
+
+/* Style for all heading elements */
+#Home, #Products, #Services, #Contacts{
+    color:black;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 5px;
+    padding: 0;
+    text-align: center; text-shadow: 3px 3px 5px purple; 
+
+}
+
+/* Hover effects for all headings */
+#Home:hover,
+#Products:hover,
+#Services:hover,
+#Contacts:hover
+ {
+    color: rgb(60, 0, 255);
+    text-decoration:aqua;
+}
+
+#d1 {
+    width: fit-content;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+#p1, #l1 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+
+}
+
+#l1 {
+    animation-delay: 0s;
+    text-align: left;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 5px rgb(255, 0, 0);     
+}
+
+#p1 {
+    animation-delay: 0.75s;
+    font-size: 22px;
+    text-align: center;
+    width: 350px;
+    line-height: 1.5;
+    margin: 10px;
+    color: rgb(1, 0, 0);
+    font-weight: 900;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#d2{
+    text-align: center; 
+    padding: 10px;
+    position: absolute; /* Added to position the container */
+    right: 10px;
+    top: 210px;   /* Added to align the container to the right */
+    width: fit-content; /* Container width */
+    
+}
+
+#p2,#l2 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+#l2 {
+    animation-delay: 0s;
+    font-size: 35px;
+    color: white;
+    display: block; /* Changed to block to stack the heading and paragraph */
+    text-align: center; /* Changed to center the heading */
+    text-shadow: 3px 3px 5px rgb(255, 0, 0); 
+    
+}
+#p2 {
+    animation-delay: 0.75s;
+    font-size: 22px;
+    display: block; /* Changed to block to stack the heading and paragraph */
+    width: 75%; /* Changed to 100% to fill the container */
+    line-height: 1.5; 
+    margin: 10px 0; /* Changed to add space between the heading and paragraph */
+    color:black;
+    text-align: center; /* Changed to center the paragraph */
+    font-weight: 900;
+    
+    
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#d3{
+    text-align: center;
+    margin-left: 75px;
+    margin-right: 100px;
+    margin-top: 100px;
+
+}
+#l3 {
+    text-align: center;
+    font-weight: 900; /* Heavy bold text */
+    font-size: 55px;
+    color: rgb(235, 224, 224); /* Text color */
+    text-shadow: 3px 3px 10px black; /* Blue shadow with offset and blur */
+}
+#d4 {
+    margin-top: 100px;
+    display: flex; /* make the container a flex container */
+    flex-wrap: nowrap; /* prevent wrapping to a new line */
+    justify-content: center; /* center horizontally */
+  }
+  
+  .item {
+    display: flex; /* make each item a flex container */
+    flex-direction: column; /* stack elements vertically */
+    margin: 20px; /* add some margin between items */
+    text-align: center; /* center text horizontally */
+    animation: fade-in 2s; /* add animation to each item */
+  }
+  
+  .item > * { /* target all direct children of .item */
+    margin: 15px; /* add some margin between elements */
+  }
+  
+  .item img { /* target all images */
+    width: 200px; /* increase image width */
+    height: 150px; /* maintain aspect ratio */
+    animation: zoom-in 2s; /* add animation to each image */
+  }
+  
+  .item h2 { /* target all headings */
+    font-size: 24px; /* increase font size */
+    text-align: center; /* center heading text horizontally */
+    animation: slide-up 2s; /* add animation to each heading */
+  }
+  
+  /* Animation definitions */
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoom-in {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slide-up {
+    0% {
+      transform: translateY(20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  #g1 {
+    max-width: 400px; /* set a maximum width for the container */
+    margin: 40px auto; /* add some margin and center the container */
+    padding: 20px; /* add some padding inside the container */
+    background-color: #f2f2f2; /* light gray background color */
+    border: 1px solid #ccc; /* light gray border */
+    border-radius: 10px; /* add a rounded corner effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow effect */
+    text-align: center; /* center the text inside the container */
+  }
+  
+  #g1 h2 {
+    margin-top: 0; /* remove the default margin top */
+    font-size: 36px; /* increase the font size to 36px */
+    font-weight: bold; /* make the font bold */
+    color: #00698f; /* dark blue text color */
+    text-align: center; /* center the heading text */
+    cursor: pointer; /* add a pointer cursor to indicate clickability */
+  }
+  
+  #g1 ol {
+    padding-left: 20px; /* add some padding to the left of the list */
+    margin-bottom: 20px; /* add some margin bottom to the list */
+  }
+  
+  #g1 li {
+    margin-bottom: 10px; /* add some margin bottom to each list item */
+    text-align: center; /* center the list item text */
+    font-size: 24px; /* increase the font size to 24px */
+    color: #333; /* dark gray text color */
+  }
+  
+  #g1 li:before {
+    content: ""; /* add an empty content to create a custom bullet point */
+    display: inline-block; /* make the bullet point inline-block */
+    width: 12px; /* increase the width of the bullet point */
+    height: 12px; /* increase the height of the bullet point */
+    background-color: #0099cc; /* bright blue background color for the bullet point */
+    border-radius: 50%; /* make the bullet point a circle */
+    margin-right: 10px; /* add some margin right to the bullet point */
+  }
+  
+  .toggle-content {
+    display: none; /* hide the list by default */
+  }
+  
+  #toggle:checked ~ .toggle-content {
+    display: block; /* show the list when the checkbox is checked */
+  }
+  #f {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #j {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  #j:hover {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  #j:active {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  .feedback-container {
+    display: none;
+  }
+  
+  #toggle {
+    display: none;
+  }
+  
+  #toggle + label {
+    cursor: pointer;
+  }
+  
+  #toggle:checked + label + .feedback-container {
+    display: block;
+  }
+  
+  .feedback-container p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .feedback-container p:before {
+    content: "\201C";
+    font-size: 24px;
+    color: #666;
+    margin-right: 10px;
+  }
+  
+  #j {
+    display: block;
+  }
+  
+  #j:active + #toggle + label + .feedback-container {
+    display: block;
+  }
